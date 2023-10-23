@@ -1,0 +1,6 @@
+
+# Define o rótulo do daemon HelloDaemonCpp
+/vendor/bin/hello_daemon_cpp           u:object_r:hellodaemoncpp_exec:s0
+
+
+#/sys/class/gpio/export           u:object_r:portDefine:s0
