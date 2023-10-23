@@ -1,0 +1,10 @@
+type hellodaemoncpp, domain;
+type hellodaemoncpp_exec, vendor_file_type, exec_type, file_type;
+
+
+#permissao para iniciar
+init_daemon_domain(hellodaemoncpp);
+
+
+#permissao para usar o /sys
+allow hellodaemoncpp sysfs:file { getattr open read write };
