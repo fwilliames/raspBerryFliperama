@@ -22,7 +22,9 @@ PRODUCT_BRAND := RaspberryPI
 PRODUCT_MODEL := rpi4
 PRODUCT_MANUFACTURER := RaspberryPiFoundation
 
-
+# Implementacao do cliente C++ para Smartlamp
+PRODUCT_PACKAGES += \
+	hello_daemon_cpp
 
 UBOOT_DEFCONFIG := rpi_4_defconfig
 ATF_PLAT        := rpi4
