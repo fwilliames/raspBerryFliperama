@@ -26,7 +26,67 @@
 		};
 	};
 	
-	
+	gpio_keys {
+		compatible = "gpio-keys";
+
+		up_button {
+			label = "Up Button";
+			gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
+			linux,code = <103>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		down_button {
+			label = "Down Button";
+			gpios = <&gpio 5 GPIO_ACTIVE_LOW>;
+			linux,code = <108>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		right_button {
+			label = "Right Button";
+			gpios = <&gpio 22 GPIO_ACTIVE_LOW>;
+			linux,code = <106>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		left_button {
+			label = "Left Button";
+			gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
+			linux,code = <105>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		a_button {
+			label = "A Button";
+			gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
+			linux,code = <30>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		b_button {
+			label = "B Button";
+			gpios = <&gpio 26 GPIO_ACTIVE_LOW>;
+			linux,code = <48>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+		start_button {
+			label = "Start Button";
+			gpios = <&gpio 19 GPIO_ACTIVE_LOW>;
+			linux,code = <28>;
+			debounce-interval = <50>;
+			wakeup-source;
+		};
+
+	};
+
 	wifi_pwrseq: wifi-pwrseq {
 		compatible = "mmc-pwrseq-simple";
 		reset-gpios = <&expgpio 1 GPIO_ACTIVE_LOW>;
